@@ -5,6 +5,7 @@ package org.escoladeltreball.collectionsdemo1;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**a
@@ -19,7 +20,8 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		List<String> list = new ArrayList(); // També List<String> list = new ArrayList<String>(); però és redundant
+		//List<String> list = new ArrayList(); // També List<String> list = new ArrayList<String>(); però és redundant
+		List<String> list = new LinkedList(); // Les dues llistes, ArrayList i LinkedList, funcionen
 		
 		list.add("Alpha");
 		list.add("Charlie");
