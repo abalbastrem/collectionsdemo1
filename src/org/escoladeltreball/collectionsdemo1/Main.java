@@ -13,6 +13,22 @@ import java.util.List;
  *
  */
 public class Main {
+	
+	/**
+	 * 
+	 * @param list
+	 * @param expressio
+	 * @return llista dels elements que contenen l'expressió
+	 */
+	public static List<String> subLlista(List<String> list, String expressio) {
+		List<String> rlist = new LinkedList<>();
+		for (String element : list) {
+			if ( element.startsWith(expressio) ) {
+				rlist.add(element);
+			}
+		}
+		return rlist;
+	}
 
 	/**
 	 * @param args
@@ -21,7 +37,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		//List<String> list = new ArrayList(); // També List<String> list = new ArrayList<String>(); però és redundant
-		List<String> list = new LinkedList(); // Les dues llistes, ArrayList i LinkedList, funcionen
+		List<String> list = new LinkedList<>(); // Les dues llistes, ArrayList i LinkedList, funcionen
 		
 		list.add("Alpha");
 		list.add("Charlie");
@@ -29,6 +45,8 @@ public class Main {
 		list.add("Echo");
 		list.add("Delta");
 		list.add("Zulu");
+		list.add("Albacete");
+		list.add("Alava");
 		
 		list.remove("Charlie");
 		
@@ -37,6 +55,9 @@ public class Main {
 		for (String string: list) {
 			System.out.println(string);
 		}
+		
+		System.out.println("==== SUBLLISTA ====");
+		System.out.println(subLlista(list,"al").toString());
 	}
 
 }
